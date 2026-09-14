@@ -1,0 +1,128 @@
+.contact {
+  background: #12151a;
+  min-height: 90svh;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+.contact .section-top {
+  margin-bottom: 90px;
+}
+.contact .section-top > p {
+  font-size: 10px;
+  line-height: 1.8;
+}
+.contact-title {
+  font-size: clamp(4rem, 11vw, 10rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+}
+.contact-title span {
+  color: #838c95;
+}
+.contact-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 55px 0 100px;
+  gap: 25px;
+}
+.contact-bottom > div > p {
+  font-size: 14px;
+  color: #929ba4;
+}
+.contact-cta {
+  display: inline-flex;
+  gap: 35px;
+  align-items: center;
+  font-size: 21px;
+  letter-spacing: -0.02em;
+  margin: 22px 0 10px;
+  min-height: 44px;
+}
+.contact-cta svg {
+  height: 30px;
+  width: 30px;
+  color: var(--accent);
+  transition: transform 0.4s;
+}
+.contact-cta:hover svg {
+  transform: translate(4px, -4px);
+}
+.email {
+  display: block;
+  font-size: 13px;
+  color: #969fa8;
+  min-height: 44px;
+  overflow-wrap: anywhere;
+}
+.email:hover {
+  color: var(--accent);
+}
+.socials {
+  display: flex;
+  gap: 35px;
+}
+.socials a {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  min-height: 44px;
+  font-size: 10px;
+}
+.socials a:hover {
+  color: var(--accent);
+}
+.footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding: 24px 0;
+  color: #8c959d;
+  font-size: 10px;
+}
+.footer a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+}
+.footer span:first-child {
+  color: #e0e4e7;
+}
+@media (max-width: 768px) {
+  .contact .section-top {
+    margin-bottom: 65px;
+  }
+  .contact .section-top > p {
+    font-size: 10px;
+  }
+  .contact-title {
+    font-size: 12.2vw;
+  }
+  .contact-bottom {
+    display: block;
+    margin: 35px 0 55px;
+  }
+  .contact-bottom > div > p {
+    font-size: 13px;
+  }
+  .contact-cta {
+    font-size: 19px;
+  }
+  .socials {
+    margin-top: 30px;
+    gap: 30px;
+  }
+  .footer {
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 10px;
+  }
+  .footer span:nth-child(2) {
+    display: none;
+  }
+}

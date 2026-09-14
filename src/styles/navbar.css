@@ -1,0 +1,128 @@
+.navbar {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(#0b0d10e8, #0b0d1000);
+  color: #f5f5f3;
+}
+.wordmark {
+  font:
+    12px "DM Mono",
+    monospace;
+  letter-spacing: 0.04em;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.logo-dot {
+  color: var(--accent);
+}
+.desktop-nav {
+  display: flex;
+  gap: 30px;
+}
+.language-toggle { display: flex; align-items: center; font: 10px 'DM Mono', monospace; }
+.language-toggle button { min-width: 44px; min-height: 44px; padding: 0; background: transparent; border: 0; color: inherit; opacity: .55; }
+.language-toggle button[aria-pressed="true"] { opacity: 1; color: var(--accent); }
+.language-toggle button:hover { opacity: 1; }
+.language-toggle > span { opacity: .4; }
+@media (min-width: 769px) and (max-width: 1100px) {
+  .desktop-nav { gap: 9px; }
+  .desktop-nav a { font-size: 9px; }
+  .navbar { padding-inline: 22px; }
+}
+.desktop-nav a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font:
+    10px "DM Mono",
+    monospace;
+  letter-spacing: 0.04em;
+  color: #a0a1a3;
+  transition: color 0.3s;
+}
+.desktop-nav a span {
+  color: #60636a;
+}
+.desktop-nav a:hover,
+.desktop-nav a[aria-current] {
+  color: #f5f5f3;
+}
+.desktop-nav a[aria-current] span {
+  color: var(--accent);
+}
+.mobile-name,
+.menu-toggle {
+  display: none;
+}
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 49;
+  background: #0b0d10;
+  padding: 120px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+.mobile-menu > a {
+  font-size: clamp(30px, 8vw, 60px);
+  letter-spacing: -0.05em;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 8px 0;
+}
+.mobile-menu > a > span {
+  font:
+    11px "DM Mono",
+    monospace;
+  color: var(--accent);
+}
+.mobile-menu p {
+  font:
+    10px "DM Mono",
+    monospace;
+  color: var(--muted);
+  margin-top: 50px;
+}
+@media (max-width: 1024px) {
+  .desktop-nav {
+    gap: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px;
+  }
+  .desktop-nav,
+  .desktop-name {
+    display: none;
+  }
+  .mobile-name,
+  .menu-toggle {
+    display: block;
+  }
+  .wordmark {
+    font-size: 19px;
+  }
+  .menu-toggle {
+    background: none;
+    border: 0;
+    font:
+      11px "DM Mono",
+      monospace;
+    min-height: 44px;
+    min-width: 60px;
+  }
+  .navbar.menu-open {
+    background: #0b0d10;
+  }
+}

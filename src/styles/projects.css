@@ -1,0 +1,281 @@
+.work-heading {
+  font-size: clamp(44px, 6.1vw, 90px);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+  margin: 0 0 90px;
+}
+.work-heading span {
+  color: #72777f;
+}
+.project {
+  border-top: 1px solid var(--line);
+  padding: 35px 0 70px;
+}
+.project-top {
+  display: flex;
+  gap: 5%;
+  align-items: flex-start;
+}
+.project-number {
+  font-size: 14px;
+  color: #626973;
+  padding-top: 2px;
+  transition: color 0.4s;
+  min-width: 25px;
+}
+.project-main {
+  flex: 1;
+  min-width: 0;
+}
+.project-category {
+  font-size: 10px;
+  color: #93999f;
+  margin-bottom: 18px;
+}
+.project h3 {
+  font-size: clamp(35px, 5vw, 76px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+}
+.project h3 a,
+.project h3 > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.project-arrow {
+  width: 42px;
+  height: 42px;
+  flex: none;
+  transition: transform 0.6s var(--ease);
+  color: #868e95;
+}
+.project h3 a {
+  min-height: 44px;
+  transition: transform 0.6s var(--ease);
+}
+.project:hover .project-number {
+  color: var(--accent);
+}
+.project:hover h3 a {
+  transform: translateX(6px);
+}
+.project:hover .project-arrow {
+  transform: rotate(45deg);
+  color: var(--accent);
+}
+.project-visual {
+  height: 310px;
+  position: relative;
+  margin: 35px 0 30px;
+  background: #12171c;
+  overflow: hidden;
+  color: #7f9cae;
+}
+.project-visual svg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.62;
+  transition:
+    transform 1.2s var(--ease),
+    opacity 1s;
+}
+.project:hover .project-visual svg {
+  transform: scale(1.025);
+  opacity: 0.9;
+}
+.visual-label,
+.visual-bottom {
+  position: absolute;
+  left: 25px;
+  z-index: 1;
+  font-size: 10px;
+  color: #7a8891;
+  letter-spacing: 0.1em;
+}
+.visual-label {
+  top: 22px;
+}
+.visual-bottom {
+  bottom: 20px;
+}
+.orbita {
+  background: radial-gradient(ellipse at center, #1d2931, #11161b 75%);
+}
+.orbita svg {
+  stroke-width: 0.75;
+}
+.seismic {
+  background-color: #11171b;
+  background-image:
+    linear-gradient(#7dd3fc09 1px, transparent 1px),
+    linear-gradient(90deg, #7dd3fc09 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.seismic svg {
+  stroke-width: 1.2;
+}
+.project-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9%;
+}
+.project-intro {
+  font-size: 21px;
+  letter-spacing: -0.02em;
+  max-width: 350px;
+  line-height: 1.45;
+}
+.project-description > p {
+  font-size: 14px;
+  color: #949ba2;
+}
+.project-description .project-highlight {
+  font-size: 12px;
+  margin-top: 16px;
+  color: #b7c3ca;
+  border-left: 1px solid #587686;
+  padding-left: 15px;
+}
+.project-description .project-tech {
+  font-size: 10px;
+  line-height: 1.9;
+  color: #79818b;
+  margin-top: 23px;
+}
+.project-link,
+.project-status {
+  display: inline-flex;
+  gap: 18px;
+  align-items: center;
+  min-height: 44px;
+  font-size: 10px;
+  margin-top: 14px;
+}
+.project-link:hover {
+  color: var(--accent);
+}
+.project-status {
+  color: var(--accent);
+}
+.recurrence {
+  position: absolute;
+  inset: 65px 14% 58px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  border-bottom: 1px solid #7dd3fc33;
+}
+.recurrence > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+.recurrence span {
+  font:
+    12px "DM Mono",
+    monospace;
+  color: #7f929e;
+}
+.recurrence i {
+  width: 1px;
+  background: #7dd3fc99;
+  position: relative;
+}
+.recurrence i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -3px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #7dd3fc;
+  background: #11171b;
+  border-radius: 50%;
+}
+.kitchen-flow {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  font:
+    12px "DM Mono",
+    monospace;
+  letter-spacing: 0.12em;
+}
+.kitchen-flow i {
+  height: 1px;
+  width: 70px;
+  background: #607887;
+}
+.kitchen-flow span {
+  padding: 24px 0;
+}
+.project-kitchen {
+  padding-bottom: 0;
+}
+@media (max-width: 768px) {
+  .work-heading {
+    margin-bottom: 55px;
+  }
+  .project {
+    padding: 28px 0 48px;
+  }
+  .project-top {
+    gap: 18px;
+  }
+  .project-number {
+    font-size: 11px;
+  }
+  .project-category {
+    font-size: 10px;
+    max-width: 230px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .project h3 {
+    font-size: clamp(32px, 7.5vw, 54px);
+  }
+  .project-arrow {
+    width: 25px;
+    height: 25px;
+  }
+  .project-visual {
+    height: 220px;
+    margin: 28px 0 24px;
+  }
+  .visual-label,
+  .visual-bottom {
+    left: 16px;
+    font-size: 10px;
+  }
+  .project-bottom {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .project-intro {
+    font-size: 20px;
+  }
+  .project-description > p {
+    font-size: 14px;
+  }
+  .project-description .project-tech {
+    font-size: 10px;
+  }
+  .kitchen-flow {
+    font-size: 10px;
+    gap: 10px;
+  }
+  .kitchen-flow i {
+    width: 24px;
+  }
+  .recurrence {
+    inset: 60px 8% 48px;
+  }
+}
